@@ -8,7 +8,7 @@ public class p42 {
 		Vector<String> result;
 		int sum = 0;
 		Vector<Integer>triangles = new  Vector<Integer>();
-		populate_triangle(triangles);
+		populate_triangle(triangles,50);
 		try {
 			result = OpenFile("p042_words.txt");
 			String str_array[] =  result.elementAt(0).split(",");
@@ -25,9 +25,9 @@ public class p42 {
 		
 	}
 	
-	static void populate_triangle(Vector<Integer>triangles)
+	static void populate_triangle(Vector<Integer>triangles,int size)
 	{
-		for (int i = 1; i < 50; i++) {
+		for (int i = 1; i < size; i++) {
 			triangles.add(i*(i+1)/2);
 		}
 	}
